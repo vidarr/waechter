@@ -10,10 +10,8 @@
 
 start() ->
 
-    U1 = userdef:user_create("Michael", "trolladynga", ["1.2.3", "2", "4.1"]),
-    U2 = userdef:user_create("Fackelmann",
-                             "not a password",
-                             ["1.2", "2.1.1", "4.1.2"]),
+    U1 = user_create("Michael", "trolladynga", ["1.2.3", "2", "4.1"]),
+    U2 = user_create("Fackelmann", "not a password", ["1.2", "2.1.1", "4.1.2"]),
 
     ok = password_is("trolladynga", U1),
     error = password_is("trolladynga", U2),
